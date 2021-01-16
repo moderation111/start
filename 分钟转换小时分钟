@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+#define hour 60
+int main()
+{
+	int min = 0;
+	int time_hour = 0;
+	int time_min = 0;
+
+	printf("请输入分钟：");
+	scanf("%d", &min);
+	
+	while (min > 0)
+	{
+		time_min = min % hour;
+		time_hour = min / hour;
+		printf("%d时%d分\n", time_hour, time_min);
+		printf("请输入分钟：");
+		scanf("%d", &min);
+	}
+
+  return 0;
+
+}
