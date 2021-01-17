@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+double trinle(double x, double y)
+{
+	y = x * x * x;
+	return y;
+}
+int main()
+{
+	double a = 0;
+	double b = 0;
+	printf("输入一个数：");
+	scanf("%lf", &a);
+	a = trinle(a, b);
+		printf("%lf", a);
+	return 0;
+}
+
