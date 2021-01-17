@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+int temperatures(double t)
+{
+	double m = 0;
+	double n = 0;
+	m = 5.0 / 9.0 * (t - 32);
+	n = m + 273.16;
+	printf("摄氏度为%.2f度，开氏温度为%.2fK\n", m, n);
+	return 0;
+
+}
+int main()
+{
+	int a = 0;
+	double i = 0;
+	printf("请输入华氏温度：");
+	a = scanf("%lf", &i);
+	while (a == 1)
+	{
+		temperatures(i);
+		printf("请输入华氏温度：");
+		a = scanf("%lf", &i);
+	}
+	printf("程序结束！");
+	return 0;
+}
