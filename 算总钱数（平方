@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+
+int main()
+{
+	int a = 0;
+	int b = 1;
+	int sum = 0;
+	printf("输入天数：");
+	scanf("%d", &a);
+	while (b <= a)
+	{
+		sum = sum + (b*b);
+		b++;
+	}
+	printf("总金额%d", sum);
+
+
+	return 0;
+}
