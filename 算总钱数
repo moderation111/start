@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+int main()
+{
+	int i = 1;
+	int day = 0;
+	int sum = 0;
+	printf("请输入天数：");
+	scanf("%d", &day);
+	while (i <= day)
+	{
+		sum = sum + i;
+		i++;
+	}
+	printf("收入%d元", sum);
+	return 0;
+}
