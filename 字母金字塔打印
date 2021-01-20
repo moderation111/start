@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+int main()
+{
+	char m = 'A';
+	char n;
+	int i, j, k,t,s;
+	printf("请输入一个大写字母：");
+	scanf("%c", &n);
+	k = n - m;
+	for (i = 0; i <= k; i++)
+	{
+		m = 'A';
+		for (j = 0; j < (k-i); j++)
+		{
+			printf(" ");
+		}
+		for (t = 0; t <= i; t++)
+		{
+			printf("%c", m);
+			m++;
+		}
+		m-=2;
+		for (s = 0; s <i; s++)
+		{
+			printf("%c", m);
+			m--;
+		}
+		printf("\n");
+	}
+	return 0;
+}
