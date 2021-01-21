@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+# include<stdio.h>
+int main()
+{
+	double arr1[8], arr2[8] = {0};
+	int i, j;
+	for (i = 0; i < 8; i++)
+	{
+		printf("请输入第%d个数：", i + 1);
+		scanf("%lf", &arr1[i]);
+	}
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j <= i; j++)
+		{
+			arr2[i] = arr2[i] + arr1[j];
+		}
+		printf("arr2[%d]=%lf\n", i + 1, arr2[i]);
+	}
+
+	return 0;
+}
