@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+
+int main()
+{
+	double a,b,i;
+	printf("输入两个浮点数：");
+	i=scanf("%lf%lf", &a, &b);
+	while (i == 2)
+	{
+		printf("两数之差除以两数之积为：%lf\n", (a - b) / (a * b));
+		printf("输入两个浮点数（输入非数字结束程序）：");
+		i = scanf("%lf%lf", &a, &b);
+	}
+	printf("程序结束");
+	return 0;
+}
