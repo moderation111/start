@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+# include<stdio.h>
+int main()
+{
+	double sum; 
+	int i, j;
+	printf("输入计算次数：");
+	scanf("%d", &i);
+	
+	while (i > 0)
+	{
+		for (j = 1, sum = 0.0; j <= i; j++)
+		{
+			sum = sum + 1.0 / j;
+		}
+		printf("1+...+1/%d=%lf\n", i, sum);
+
+		for (j = i, sum = 0; j <= i; j++)
+		{
+			if (j % 2 == 0)
+				sum = sum - 1.0 / j;
+			else
+				sum = sum + 1.0 / j;
+		}
+		printf("1-1/2+...1/%d=%lf\n", i, sum);
+		printf("输入计算次数：");
+		scanf("%d", &i);
+	}
+	return 0;
+}
