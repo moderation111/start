@@ -1,0 +1,54 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+# include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<time.h>
+
+void game()
+{   
+	int ret = rand();
+	int gues = 0;
+	ret = ret % 100+1;
+	printf("请输入你猜的数：");
+	scanf("%d", &gues);
+	while (gues != ret)
+	{
+		if (gues > ret)
+			printf("猜大了\n");
+		else
+			printf("猜小了\n");
+    	printf("你再猜：");
+		scanf("%d", &gues);
+	}
+	printf("恭喜你猜对了\n");
+	printf("答案是：%d\n", ret);
+}
+
+int main()
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));
+	do
+	{
+      printf("*******************\n");
+	  printf("**1.play   0.exit**\n");
+	  printf("*******************\n");
+	  printf("请输入：");
+	  scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("game over");
+			break;
+		default:
+			break;
+		}
+	}
+	while (input != 0);
+
+	return 0;
+}
