@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+# include<stdio.h>
+
+unsigned long long step_flour(unsigned long long i)
+{
+	//long long m = 0, n = 0,s=0;
+	//
+	//for (s = 0; s < i; s++)
+	//{
+	//	m = n * 2 + 1;
+	//	n = m;
+	//}
+	//return n;
+	if (i == 1)
+		return 1;
+	else 
+		return step_flour(i-1)*2+1;
+}
+
+int main()
+{
+	unsigned long long a = 0, b = 0;
+	printf("输入汉诺塔的层数：");
+	while (scanf("%d", &a) == 1)
+	{
+		b = step_flour(a);
+		printf("需要移动%lld步\n", b);
+		printf("输入汉诺塔的层数：(输入非数字结束)");
+	}
+	printf("程序结束");
+	return 0;
+}
