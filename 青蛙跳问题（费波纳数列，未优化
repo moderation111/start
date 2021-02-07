@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int step_z(int i)
+{
+	int sum = 0;
+	if (i == 1)
+		return 1;
+	else if (i == 2)
+		return 2;
+	else
+	   sum = step_z(i - 1) + step_z(i - 2);
+	return sum;
+}
+
+int main()
+{
+	int s,a;
+	printf("请输入台阶数：");
+	while (scanf("%d", &s) == 1)
+	{
+		a = step_z(s);
+		printf("有%d种走法\n", a);
+		printf("请输入台阶数(输入非数字结束程序)：");
+	}
+	printf("程序结束");
+	return 0;
+}
